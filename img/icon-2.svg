@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="28px" viewBox="0 0 20 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>3DB58774-E3F9-4885-8110-B8CC4BFD67B4</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <polygon id="path-1" points="0 13.8449523 0 0 20 0 20 13.8449523 20 27.6899045 0 27.6899045"></polygon>
+    </defs>
+    <g id="pazomat" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="001_pazomat_hp-" transform="translate(-80.000000, -2604.000000)">
+            <g id="footer-new" transform="translate(10.000000, 2496.000000)">
+                <g id="icon2" transform="translate(70.000000, 108.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-2"></g>
+                    <path d="M10,14.7899 C7.376,14.7899 5.25,12.6639 5.25,10.0399 C5.25,7.4169 7.376,5.2899 10,5.2899 C12.623,5.2899 14.75,7.4169 14.75,10.0399 C14.75,12.6639 12.623,14.7899 10,14.7899 M10,-0.0001 C4.477,-0.0001 0,4.4769 0,9.9999 C0,16.8199 9.22,27.2499 9.22,27.2499 C9.406,27.5259 9.717,27.6909 10.05,27.6899 C10.372,27.6809 10.67,27.5169 10.85,27.2499 C10.85,27.2499 20,16.8399 20,10.0199 C20,4.4969 15.522,0.0199 10,0.0199" id="Fill-1" fill="#FFCC01" mask="url(#mask-2)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
