@@ -1073,8 +1073,9 @@ header {
 			}
 		}
 	}
+} 
 
-	footer {
+footer {
 		@media (max-width: $screen-xs-min) {
 			background-color: $nav-2-color;
 		}
@@ -1427,4 +1428,3 @@ header {
 			}
 		}
 	}
-} 
