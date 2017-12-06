@@ -1,1 +1,81 @@
-<h1>The header</h1>
+<header class="head">
+    <!-- logo and search sec-->
+    <div class="main-nav container-fluid d-flex  flex-column">
+        <!-- top section -->
+        <div class="container top-sec-nav align-items-center d-flex justify-content-between align-items-center col">
+            <div class="lng d-none d-lg-block">
+                ENG
+            </div>
+            <div class="dropdown top-menu-mobile d-lg-none">
+                <button type="button" class="btn manu-mobile dropdown-toggle" data-toggle="dropdown">
+                    <img src="../img/menu.png" srcset="img/menu@2x.png 2x,
+                 img/menu@3x.png 3x" class="menu"> 
+                </button>
+                <div class="dropdown-menu">${require("./top-navigation.html")}</div>
+            </div>
+            <div class="logo">
+                <img src="../img/pazlogo.png" srcset="img/pazlogo@2x.png 2x,
+                  img/pazlogo@3x.png 3x" class="pazlogo">
+            </div>
+            <div class="search">
+                <img src="../img/search.svg" class="search">
+            </div>
+        </div>
+        <!-- main nav sec -->
+        <div class="low-sec-nav container d-none d-lg-block">
+            ${require("./top-navigation.html")}
+        </div>
+    </div>
+    <!-- HEADER 2 -->
+    <!-- reg and personal erea -->
+    <div class="pazomat-header container-fluid d-flex align-items-center justify-content-between">
+        <div class="container d-flex justify-content-lg-between">
+            <div class="r-side-gray-nav d-flex justify-content-start align-items-center col-lg-8">
+                <div class="pazomat-logo-sub-nav">
+                    <img src="../img/pazomat-logo.svg" class="pazomat-logo">
+                </div>
+                <div class="d-none d-lg-block">
+                    <ul class="sub-nav-pazomat d-flex flex-row navbar-nav navbar navbar-expand-lg">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">אודות
+                </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">נקודות שירות
+                </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">טסטים ושירותים</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">מחירונים</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">שירותים</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="l-side-gray-nav d-flex justify-content-lg-between">
+                <div class="left-buttons d-flex justify-content-start">
+                    <button class="button pazomat-login d-flex align-items-center justify-content-center justify-content-lg-around flex-lg-row flex-column">
+                        <img src="../img/login.svg" class="login">
+                        <p class="d-none d-lg-block">כניסה
+                            <br>לאיזור האישי</p>
+                        <p class="d-lg-none">כניסה</p>
+                    </button>
+                    <button class="button pazomat-signup d-flex align-items-center justify-content-center justify-content-lg-around flex-lg-row flex-column">
+                        <img src="../img/signin.svg" class="signin">
+                        <p class="d-none d-lg-block">הרשמה
+                            <br>לאתר פזומט</p>
+                        <p class="d-lg-none">הרשמה</p>
+                    </button>
+                    <button class="button pazomat-mobile-menu-trigger d-flex align-items-center justify-content-center flex-column d-lg-none">
+                        <img src="../img/menu.svg" class="menu">
+                        <p>תפריט</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
