@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>9EFA63B0-EB05-43B5-8066-94C265EF7926</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <polygon id="path-1" points="0 24 24 24 24 0 5.08220165e-21 0"></polygon>
+    </defs>
+    <g id="pazomat" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="001_pazomat_hp-" transform="translate(-78.000000, -2678.000000)">
+            <g id="icon3" transform="translate(78.000000, 2678.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-2"></g>
+                <path d="M18.8898281,12.9249123 L16.644,12.9249123 L16.644,21.2363023 L12.8935313,21.2363023 L12.8935313,12.9249123 L11.4387187,12.9249123 L11.4387187,10.1252146 L12.8935313,10.1252146 L12.8935313,8.34185871 C12.8944687,6.0036914 13.8654844,4.61535036 16.6209375,4.61535036 L19.4132344,4.61535036 L19.4132344,7.40492304 L17.7913594,7.40492304 C16.7187656,7.40492304 16.6485938,7.80462538 16.6485938,8.55228017 L16.644,10.1242771 L19.1954063,10.1242771 L18.8898281,12.9249123 Z M19.5,0 L4.5,0 C2.014125,0 0,2.01416794 0,4.49999121 L0,19.5000088 C0,21.9858321 2.014125,24 4.5,24 L19.5,24 C21.9858281,24 24,21.9858321 24,19.5000088 L24,4.49999121 C24,2.01416794 21.9858281,0 19.5,0 L19.5,0 Z" id="Fill-1" fill="#FFCC01" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

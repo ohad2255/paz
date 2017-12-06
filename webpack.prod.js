@@ -5,7 +5,6 @@ const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const cssnano = require("cssnano");
 
 module.exports = merge(common, {
-  devtool: "none",
   plugins: [
     new CleanWebpackPlugin(["dist"]),
     new OptimizeCssAssetsPlugin({
