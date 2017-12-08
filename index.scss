@@ -1,6 +1,7 @@
 @import "node_modules/bootstrap/scss/bootstrap";
 @import "./styles/color-palette.scss";
 @import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&subset=hebrew');
+$screen-xs-min: 576px;
 $screen-sm-min: 768px;
 $screen-md-min: 992px;
 $screen-lg-min: 1200px;
@@ -31,7 +32,7 @@ button {
     border: none;
     font-family: inherit;
     cursor:pointer;
-    @media (max-width: $screen-sm-min) { 
+    @media (max-width: $screen-xs-min) { 
 		padding: 0;
 		margin: 0;
 	}		
@@ -53,13 +54,47 @@ header {
 			//height: 120px;
 		}
 
-		@media (max-width: $screen-sm-min) { 
+		@media (max-width: $screen-xs-min) { 
 			height: 80px;
 		}		
 		
 		.top-sec-nav {
 			padding:0;
-			@media (max-width: $screen-sm-min) { 
+			.top-menu-mobile {
+				.dropdown-toggle::after {
+				    display:none
+				}
+
+				.menu-mobile {
+						padding: 0;
+				}
+
+				.mobile-dropdown {
+					width: 300px;
+					padding: 0;
+
+					.main-navigation {
+						padding: 0;
+					}
+					a {
+						font-family: Rubik;
+						font-size: 17px;
+						line-height: 1;
+						letter-spacing: 1.5px;
+						text-align: right;
+						color: #3b3b3b;
+						width: 100%;
+						padding-right: 17px;
+						height: 64px;
+						padding: 25px 17px 0 0;
+						border-bottom: 1px solid $footer-lines;
+					}
+					.last {
+						border-bottom: 5px solid $paz-yellow;
+					}
+				}
+			}
+			@media (max-width: $screen-xs-min) { 
 				
 			}		
 
@@ -69,7 +104,7 @@ header {
 					@media (max-width: $screen-md-min) { 
 						width: 100px;
 					}
-					@media (max-width: $screen-sm-min) { 
+					@media (max-width: $screen-xs-min) { 
 						width: 55px;
 					}		
 				}
@@ -90,21 +125,21 @@ header {
 					width: 30px;
 					margin-left: 30px;
 				}
-				@media (max-width: $screen-sm-min) { 
+				@media (max-width: $screen-xs-min) { 
 					width: 18px;
 					margin-left: 0;
 				}		
 			}
 		}
 
-		.manu-mobile {
+		.menu-mobile {
 			background-color: inherit;
 			img {
 				@media (max-width: $screen-md-min) { 
 					width: 40px;
 					margin-right: 30px;
 				}
-				@media (max-width: $screen-sm-min) { 
+				@media (max-width: $screen-xs-min) { 
 					width: 20px;
 					margin-right: 0;
 				}
@@ -150,7 +185,7 @@ header {
 	@media (max-width: $screen-md-min){
 		height: 120px;
 	}
-	@media (max-width: $screen-sm-min){
+	@media (max-width: $screen-xs-min){
 		height: 70px;
 	}
 	.container {
@@ -158,7 +193,7 @@ header {
 
 		.l-side-gray-nav {
 			padding-left: 0;
-			@media (max-width: $screen-sm-min) { 
+			@media (max-width: $screen-xs-min) { 
 				padding: 0
 			}
 			
@@ -168,7 +203,7 @@ header {
 					@media (max-width: $screen-md-min) { 
 						padding-left: 30px;
 					}
-					@media (max-width: $screen-sm-min) { 
+					@media (max-width: $screen-xs-min) { 
 						width: 100%;
 						padding: 0
 					}
@@ -181,14 +216,14 @@ header {
 							background-color: inherit;
 							width: 100%;
 						}
-						@media (max-width: $screen-sm-min) { 
+						@media (max-width: $screen-xs-min) { 
 							background-color: $nav-2-color;
 							width: 100%;
 						}
 
 						img {
 							height: 32px;
-							@media (max-width: $screen-sm-min){
+							@media (max-width: $screen-xs-min){
 								margin: 0;
 							}
 						}
@@ -205,40 +240,76 @@ header {
 								text-align: center;
 								line-height: 1.5;
 							}
-							@media (max-width: $screen-sm-min) { 
+							@media (max-width: $screen-xs-min) { 
 								font-size: 10px;
 								text-align: center;
 								line-height: 15px;
 							}
 						}
 					}
+				.mobile-pazomat-menu-container	{
+					margin-right: 35px;
+					@media (max-width: $screen-xs-min) { 
+						margin-right: 0
+					}
+					
+					.dropdown-toggle::after {
+				    	display:none
+					}
+					
 
 					.pazomat-mobile-menu-trigger {
 						padding: 0;
 						height: 100%;
 						background-color: $nav-2-color;
 						@media (max-width: $screen-md-min) { 
-							margin: 0 35px 0 0;
+							margin: 0;
 						}
 
-						@media (max-width: $screen-sm-min) { 
+						@media (max-width: $screen-xs-min) { 
 							margin: 0;
 						}
 						img {
 							height: 40px;
-							@media (max-width: $screen-sm-min) { 
+							@media (max-width: $screen-xs-min) { 
 							width: 20px;
 							height: 18px;
 							}
 						}
 					}
 
+					.mobile-pazomat-menu {
+						padding:0;
+						.sub-nav-pazomat {
+							border-bottom: 4px solid $paz-yellow;
+							padding:0;
+							li {
+								width: 100%;
+								a {
+									font-family: Rubik;
+									font-size: 15px;
+									line-height: 1;
+									letter-spacing: 1.5px;
+									text-align: right;
+									color: #3b3b3b;
+									width: 100%;
+									padding-right: 17px;
+									height: 55px;
+									padding: 0;
+									padding-top: 20px;
+									padding-right: 15px;
+								}
+							}
+						}
+					}
+				}
+
 					.pazomat-signup {
 						margin-right: 3px;
 						@media (max-width: $screen-md-min) { 
 							margin: 0 35px 0 0;
 						}
-						@media (max-width: $screen-sm-min) { 
+						@media (max-width: $screen-xs-min) { 
 							margin-right: 0;
 							padding: 0 18px 0 18px;
 						}
@@ -247,7 +318,7 @@ header {
 							@media (max-width: $screen-md-min) { 
 								height: 40px;
 							}
-							@media (max-width: $screen-sm-min) { 
+							@media (max-width: $screen-xs-min) { 
 								height: 18px;
 							}
 						}
@@ -259,7 +330,7 @@ header {
 							@media (max-width: $screen-md-min) { 
 								height: 40px;
 							}
-							@media (max-width: $screen-sm-min) { 
+							@media (max-width: $screen-xs-min) { 
 								width: 18px;
 								height: 18px;
 							}
@@ -267,37 +338,38 @@ header {
 					}
 				}
 		}
-		.r-side-gray-nav {
+		.r-side-grey-nav {
 			padding-right: 0;
-			@media (max-width: $screen-sm-min) { 
+			@media (max-width: $screen-xs-min) { 
 				padding: 0;
 			}
-			.sub-nav-pazomat {
-				font-size:15px;
-				font-weight: 500;
-				list-style: none;
-		
-				@media (max-width: $screen-md-min){
-					display: none;
-				}
-
-				li {
-					a {
-						color: $dark-grey;
-						line-height: 15px;
-						padding: 0;
+			.pazomat-navigation-lg {
+				.sub-nav-pazomat {
+					font-size:15px;
+					font-weight: 500;
+					list-style: none;
+			
+					@media (max-width: $screen-md-min){
+						display: none;
 					}
-					padding: 0 20px;
-					border-left: 1px solid $dark-grey;
-					&:first-child {
-						padding-right: 0;	
-					} 
-					&:last-child{
-						border-left: none;
+
+					li {
+						a {
+							color: $dark-grey;
+							line-height: 15px;
+							padding: 0;
+						}
+						padding: 0 20px;
+						border-left: 1px solid $dark-grey;
+						&:first-child {
+							padding-right: 0;	
+						} 
+						&:last-child{
+							border-left: none;
+						}
 					}
 				}
 			}
-
 			.pazomat-logo-sub-nav {
 				padding-left: 24px;
 
@@ -306,14 +378,14 @@ header {
 					padding: 0;
 				}
 
-				@media (max-width: $screen-sm-min) { 
+				@media (max-width: $screen-xs-min) { 
 					margin:0 0 0 8px;
 				}
 
 				img {
 					width: 235px;
 					
-					@media (max-width: $screen-sm-min) { 
+					@media (max-width: $screen-xs-min) { 
 						width: 126px;
 					}	
 				}
@@ -331,7 +403,7 @@ header {
 		margin: 0;
 	}
 
-	@media (max-width: $screen-sm-min) { 
+	@media (max-width: $screen-xs-min) { 
 		margin: 0;
 	}	
 
@@ -341,7 +413,7 @@ header {
 
 	.gallery {
 		position: relative;
-		@media (max-width: $screen-sm-min) { 
+		@media (max-width: $screen-xs-min) { 
 
 		}
 		.main-gallery{
@@ -349,7 +421,7 @@ header {
 			.swiper-container {
 				height: 435px;
 
-				@media (max-width: $screen-sm-min) { 
+				@media (max-width: $screen-xs-min) { 
 					height: 390px;
 				}
 				@media (max-width: $screen-md-min){
@@ -359,12 +431,12 @@ header {
 					background-image: url('img/main-gallery-slide-1.png');
 					
 					@media (max-width: $screen-md-min) { 
-						background-image: url('img/mobile-gallery-img.png');
+						background-image: url('img/main-gallery-slide-1.png');
 						background-repeat: no-repeat;
 						background-size: cover;
 					}
 
-					@media (max-width: $screen-sm-min) { 
+					@media (max-width: $screen-xs-min) { 
 						background-image: url('img/mobile-gallery-img.png');
 						background-repeat: no-repeat;
 						background-size: contain;
@@ -372,12 +444,12 @@ header {
 
 					.gallery-p {
 						position: absolute;
-						//top: 90px;
-						//right: 100px;
+						top: 90px;
+						right: 100px;
 						text-align: right;
 						z-index: 101;
 						font-size: 45px;
-						width: 100%;
+						//width: 100%;
 
 						@media (max-width: $screen-md-min) { 
 							top: 90px;
@@ -385,7 +457,7 @@ header {
 							width: 100%;
 						}
 
-						@media (max-width: $screen-sm-min) { 
+						@media (max-width: $screen-xs-min) { 
 							font-size: 27px;
 							right: 0;
 							top: 190px;
@@ -401,7 +473,7 @@ header {
 								margin-left: 8px;
 							}
 
-							@media (max-width: $screen-sm-min) { 
+							@media (max-width: $screen-xs-min) { 
 								font-size: 21px;
 								font-weight: 500;
 								line-height: 1.95;
@@ -418,7 +490,7 @@ header {
 								font-size: 32px;
 							}
 
-							@media (max-width: $screen-sm-min) { 
+							@media (max-width: $screen-xs-min) { 
 								font-size: 21px;
 								line-height: 1.95;
 								text-align: center;
@@ -431,13 +503,13 @@ header {
 							font-weight: 400;
 							color: $text-white;
 							margin-top: 10px;
-							@media (max-width: $screen-md-min) { 
+							@media (max-width: $screen-lg-min) { 
 								font-size: 19px;
 								font-weight: 400;
 								color: $text-white;
 							}
 
-							@media (max-width: $screen-sm-min) { 
+							@media (max-width: $screen-xs-min) { 
 								display: none;
 							}
 						}
@@ -467,7 +539,7 @@ header {
 								height: 50px;
 							}
 
-							@media (max-width: $screen-sm-min) { 
+							@media (max-width: $screen-xs-min) { 
 								width: 278px;
 								height: 46px;
 								object-fit: contain;
@@ -481,9 +553,18 @@ header {
 						//width: 320px;
 						width: 100%;
 						position: absolute;
-						bottom: 150px;
 		  				background-image: linear-gradient(to bottom, #264f8e, rgba(255, 255, 255, 1));
 						-webkit-box-shadow: 0px -11px 40px 55px rgba(38, 79, 142, 1);
+						display: none;
+						@media (max-width: $screen-xs-min) { 
+							bottom: 0;
+							display: block;
+						}
+
+						@media (max-width: $screen-xs-min) { 
+							bottom: 150px;
+							display: block;
+						}
 					}
 				}
 
@@ -504,7 +585,7 @@ header {
     						height: 250px;
 							width: 285px;
 						}
-						@media (max-width: $screen-sm-min) { 
+						@media (max-width: $screen-xs-min) { 
     						height: 100px;
 							width: 200px;
 						}
@@ -528,7 +609,7 @@ header {
     						height: 250px;
 							width: 285px;
 						}
-						@media (max-width: $screen-sm-min) { 
+						@media (max-width: $screen-xs-min) { 
     						height: 100px;
 							width: 200px;
 						}
@@ -540,7 +621,7 @@ header {
 					.swiper-pagination-bullet {
 						border-radius: 0;
 
-						@media (max-width: $screen-sm-min) { 
+						@media (max-width: $screen-xs-min) { 
 							width: 6px;
 							height: 6px;
 						}
@@ -550,14 +631,14 @@ header {
 					}
 				}	
 				.main-prev {
-					@media (max-width: $screen-sm-min) { 
+					@media (max-width: $screen-xs-min) { 
 						object-fit: contain;
 						background-size: 27px 35px;
 						top: 188px;
 					}
 				}
 				.main-next {
-					@media (max-width: $screen-sm-min) { 
+					@media (max-width: $screen-xs-min) { 
 						object-fit: contain;
 						background-size: 27px 35px;
 						top: 188px;
@@ -606,7 +687,7 @@ header {
 
 			.inputs {
 				margin: 20px 40px 0 40px;
-				@media (max-width: $screen-sm-min) { 
+				@media (max-width: $screen-xs-min) { 
 					
 				}
 
@@ -634,7 +715,7 @@ header {
 						height: 40px;
 						width: 225px;
 					}
-					@media (max-width: $screen-sm-min) { 
+					@media (max-width: $screen-xs-min) { 
 						height: 40px;
 						width: 270px;
 					}
@@ -655,7 +736,7 @@ header {
 					height: 45px;
 					width: 220px;
 				}
-				@media (max-width: $screen-sm-min) { 
+				@media (max-width: $screen-xs-min) { 
 					width: 268px;
 					height: 46px;
 					object-fit: contain;
@@ -667,7 +748,7 @@ header {
 					font-weight: 400;
 				}
 			}	
-			@media (max-width: $screen-sm-min) { 
+			@media (max-width: $screen-xs-min) { 
 				
 			}	
 		}	
@@ -680,7 +761,7 @@ header {
 			border: none;
 			padding-top: 50px;
 			background-color: $text-white;
-			@media (max-width: $screen-sm-min) {
+			@media (max-width: $screen-xs-min) {
 				padding-top: 32px;
 			}
 		}
@@ -696,7 +777,7 @@ header {
 				@media (max-width: $screen-md-min){
 					padding: 15px 0 30px;
 				}
-				@media (max-width: $screen-sm-min) {
+				@media (max-width: $screen-xs-min) {
 					padding: 0px 0px 20px 0px;
 				}
 			}
@@ -710,10 +791,10 @@ header {
 				li {
 
 					@media (max-width: $screen-md-min){
-						width: 420px;
+						width: 50%
 					}
 
-					@media (max-width: $screen-sm-min){
+					@media (max-width: $screen-xs-min){
 						width: 280px;
 					}
 
@@ -728,7 +809,7 @@ header {
 					&:hover {
 						.background-icon {
 							transform: scale(1.1);
-							@media (max-width: $screen-sm-min) {
+							@media (max-width: $screen-xs-min) {
 								
 							}
 						}
@@ -738,7 +819,7 @@ header {
 							border-top: 0;
 							border-left: 0;
 							padding: 20 0 10 0;
-							@media (max-width: $screen-sm-min) {
+							@media (max-width: $screen-xs-min) {
 
 							}
 						}
@@ -753,7 +834,7 @@ header {
 							background-color: $med-grey;
 							
 						}
-						@media (max-width: $screen-sm-min) {
+						@media (max-width: $screen-xs-min) {
 							height: 190px;
 							width: 280px;
 							padding: 0;
@@ -773,7 +854,7 @@ header {
 								height: 158.9px;
 							}
 
-							@media (max-width: $screen-sm-min) {
+							@media (max-width: $screen-xs-min) {
 								width: 158.9px;
 								padding: 0;
 							}	
@@ -807,7 +888,7 @@ header {
 					border-left: 0;
 					margin: 20px 0 0 10px;
 
-					@media (max-width: $screen-sm-min) {
+					@media (max-width: $screen-xs-min) {
 						width: 275px;
 						height: 93px;
 						border: 4px solid $footer-lines;
@@ -830,7 +911,7 @@ header {
 							color: $mobile-text-color;
 							padding: 0 20px;
 						}
-						@media (max-width: $screen-sm-min) {
+						@media (max-width: $screen-xs-min) {
 							width: 260px;
 							height: 34px;
 							font-family: $main-font;
@@ -851,7 +932,7 @@ header {
 							color: $mobile-text-color;
 						}
 						
-						@media (max-width: $screen-sm-min) {
+						@media (max-width: $screen-xs-min) {
 							width: 260px;
 							height: 20px;
 							font-family: $main-font;
@@ -877,7 +958,7 @@ header {
 		margin-top: 35px; 	
 		height: 120px;
 		background-color: $nav-2-color;
-		@media (max-width: $screen-sm-min) {
+		@media (max-width: $screen-xs-min) {
 			height: 195px;
 			background-color: $nav-2-color;
 		}
@@ -895,7 +976,7 @@ header {
 
 			.swiper-button-down {
 				-webkit-transform: rotate(-90deg);
-				@media (max-width: $screen-sm-min) {
+				@media (max-width: $screen-xs-min) {
 					display: none;
 				}
 			}
@@ -904,13 +985,13 @@ header {
 				height: 120px;
 				width: 170px;
 				position: absolute;
-				@media (max-width: $screen-sm-min) {
+				@media (max-width: $screen-xs-min) {
 					height: 100%;
 					width: 100%;
 				}
 
 				.mishpatiot-prev {
-					@media (max-width: $screen-sm-min) {
+					@media (max-width: $screen-xs-min) {
 					object-fit: contain;
    					background-size: 15px 25px;
    					fill: $mobile-text-color;
@@ -918,7 +999,7 @@ header {
 				}
 
 				.mishpatiot-next {
-					@media (max-width: $screen-sm-min) {
+					@media (max-width: $screen-xs-min) {
 					object-fit: contain;
    					background-size: 15px 25px;
    					 fill: $mobile-text-color;
@@ -938,7 +1019,7 @@ header {
 					direction: ltr;
 				    top: 38px;
     				right: 58px;
-    				@media (max-width: $screen-sm-min) {
+    				@media (max-width: $screen-xs-min) {
 						right: 0px;
 						top: 0px;
 						width: 48px;
@@ -958,7 +1039,7 @@ header {
 						position: relative;
 						font-size: 30px;
 						font-weight: 300;
-						@media (max-width: $screen-sm-min) {
+						@media (max-width: $screen-xs-min) {
 						font-size: 15px;
 						}
 					}
@@ -968,7 +1049,7 @@ header {
 			.mishpatiot-swiper-wrapper {
 				.swiper-slide {
 					margin-right: 95px;
-					@media (max-width: $screen-sm-min) {
+					@media (max-width: $screen-xs-min) {
 						margin: 0;
 					}
 
@@ -976,7 +1057,7 @@ header {
 						text-align: right;
 						a {
 							.play-btn-border {
-								@media (max-width: $screen-sm-min) {
+								@media (max-width: $screen-xs-min) {
 									display: none;
 								}
 							}
@@ -987,7 +1068,7 @@ header {
 							font-size: 17px;
 							font-weight: 600;
 							color: $nav-2-text-grey;
-							@media (max-width: $screen-sm-min) {
+							@media (max-width: $screen-xs-min) {
 								display: none;
 							}
 						}
@@ -995,7 +1076,7 @@ header {
 							margin: 0;
 							font-size: 17px;
 							color: $nav-2-text-grey;
-							@media (max-width: $screen-sm-min) {
+							@media (max-width: $screen-xs-min) {
 								font-size: 12px;
 								margin: auto;
 							}
@@ -1019,7 +1100,7 @@ header {
 						}
 						.slide-1-p {
 							height: 52px;
-							@media (max-width: $screen-sm-min) {
+							@media (max-width: $screen-xs-min) {
 								height: 72px;
 								width: 223px;
 							}
@@ -1034,14 +1115,14 @@ header {
 		padding: 0;
 		border-bottom: 8px solid $med-grey;
 		height: 120px;
-		@media (max-width: $screen-sm-min) {
+		@media (max-width: $screen-xs-min) {
 			height: 107px;
 			border-bottom: solid 5px $med-grey;
 		}
 		.swiper-container {
 			height: 100%;
 			.swiper-wrapper {
-				@media (max-width: $screen-sm-min) {
+				@media (max-width: $screen-xs-min) {
 					img {
 						width: 111px;
 						height: 32px;
@@ -1053,7 +1134,7 @@ header {
 					img {
 						margin-left: 30px;
 						height: 42px;
-						@media (max-width: $screen-sm-min) {
+						@media (max-width: $screen-xs-min) {
 							width: 111px;
 							height: 32px;
 							margin-left: 31px;
@@ -1064,20 +1145,20 @@ header {
 					}
 
 					.img-just-lg {
-						@media (max-width: $screen-sm-min) {
+						@media (max-width: $screen-xs-min) {
 							display: none;
 						}
 					}
 				}
 			}
 			.logos-prev {
-				@media (max-width: $screen-sm-min) {
+				@media (max-width: $screen-xs-min) {
 					display: none;
 				}
 			}
 
 			.logos-next {
-				@media (max-width: $screen-sm-min) {
+				@media (max-width: $screen-xs-min) {
 					display: none;
 				}
 			}
@@ -1086,7 +1167,7 @@ header {
 } 
 
 footer {
-		@media (max-width: $screen-sm-min) {
+		@media (max-width: $screen-xs-min) {
 			background-color: $nav-2-color;
 		}
 		.top-footer {
@@ -1098,7 +1179,7 @@ footer {
 				height: 440px;
 			}
 
-			@media (max-width: $screen-sm-min) {
+			@media (max-width: $screen-xs-min) {
 				border: none;
 				height: 100%;
 			}
@@ -1106,7 +1187,7 @@ footer {
 			.left-footer {
 				padding: 0 0 0 40px;
 		
-				@media (max-width: $screen-sm-min) {
+				@media (max-width: $screen-xs-min) {
 					display: none;
 				}
 
@@ -1124,6 +1205,10 @@ footer {
 						color: $nav-2-text-grey;
 						&:nth-child(-n+3) {
 						border-left: 1px solid $footer-lines;
+						}
+
+						li {
+							text-align: center;
 						}
 					}
 						img {
@@ -1173,7 +1258,7 @@ footer {
 						padding: 0 10px;
 				}
 
-				@media (max-width: $screen-sm-min) {
+				@media (max-width: $screen-xs-min) {
 					padding: 0 20px;
 					margin: 30px 0;
 				}
@@ -1184,7 +1269,7 @@ footer {
 						font-size: 20px;
 					}
 
-					@media (max-width: $screen-sm-min) {
+					@media (max-width: $screen-xs-min) {
 						font-size: 15px;
 						text-align: center;
 						
@@ -1198,7 +1283,7 @@ footer {
 						font-size: 20px;
 					}
 
-					@media (max-width: $screen-sm-min) {
+					@media (max-width: $screen-xs-min) {
 					font-size: 15px;
 					text-align: center;
 					color: $nav-2-text-grey;
@@ -1212,7 +1297,7 @@ footer {
 						font-size: 20px;
 					}
 
-					@media (max-width: $screen-sm-min) {
+					@media (max-width: $screen-xs-min) {
 						font-size: 15px;
 						text-align: center;
 						color: $nav-2-text-grey;
@@ -1240,7 +1325,7 @@ footer {
 						@media (max-width: $screen-md-min) {
 							width: 52.5px;
 						}
-						@media (max-width: $screen-sm-min) {
+						@media (max-width: $screen-xs-min) {
 							width: 35px;
 						}
 					}
@@ -1249,14 +1334,14 @@ footer {
 						@media (max-width: $screen-md-min) {
 							width: 30px;
 						}
-						@media (max-width: $screen-sm-min) {
+						@media (max-width: $screen-xs-min) {
 							width: 20px;
 						}
 					}
 
 					.top-t, .bottom-t {
 
-						@media (max-width: $screen-sm-min) {
+						@media (max-width: $screen-xs-min) {
 							padding: 0;
 						}
 					}
@@ -1282,7 +1367,7 @@ footer {
 						@media (max-width: $screen-md-min) {
 							width: 36px;
 						}
-						@media (max-width: $screen-sm-min) {
+						@media (max-width: $screen-xs-min) {
 							width: 24px;
 						}
 					}
@@ -1291,13 +1376,13 @@ footer {
 						@media (max-width: $screen-md-min) {
 							width: 51.5px;
 						}
-						@media (max-width: $screen-sm-min) {
+						@media (max-width: $screen-xs-min) {
 							width: 34.3px;
 						}
 					}
 
 					.top-b, .bottom-b {
-						@media (max-width: $screen-sm-min) {
+						@media (max-width: $screen-xs-min) {
 							padding: 0;
 						}
 					}	
@@ -1306,7 +1391,7 @@ footer {
 			.right-footer {
 		
 				padding:0 35px 0 0;
-				@media (max-width: $screen-sm-min) {
+				@media (max-width: $screen-xs-min) {
 					display: none;
 				}
 				@media (max-width: $screen-md-min) {
@@ -1345,7 +1430,7 @@ footer {
 				height: 180px;
 			}
 
-			@media (max-width: $screen-sm-min) {
+			@media (max-width: $screen-xs-min) {
 				height: 100%;
 			}
 
@@ -1364,7 +1449,7 @@ footer {
 					margin-bottom: 0;
 				}	
 
-				@media (max-width: $screen-sm-min) {
+				@media (max-width: $screen-xs-min) {
 					padding: 0;
 					margin: 21px 0;
 					img {
@@ -1379,7 +1464,7 @@ footer {
 			}
 
 			.footer-nav {
-				@media (max-width: $screen-sm-min) {
+				@media (max-width: $screen-xs-min) {
 					padding: 0 9px 16px 0;
 					border-bottom: 1px solid $footer-lines;
 				}
@@ -1396,7 +1481,7 @@ footer {
 					.last {
 						padding: 0;
 						border: none;
-						@media (max-width: $screen-sm-min) {
+						@media (max-width: $screen-xs-min) {
 								padding: 0;
 						}
 					}
@@ -1419,12 +1504,12 @@ footer {
 								border: none;
 							}
 
-							@media (max-width: $screen-sm-min) {
+							@media (max-width: $screen-xs-min) {
 								padding: 0 0 0 9px;
 							}
 						}
 
-						@media (max-width: $screen-sm-min) {
+						@media (max-width: $screen-xs-min) {
 							opacity: 0.8;
 							font-size: 13px;
 							letter-spacing: 1.5px;
