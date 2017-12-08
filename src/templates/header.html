@@ -7,11 +7,13 @@
                 ENG
             </div>
             <div class="dropdown top-menu-mobile d-lg-none">
-                <button type="button" class="btn manu-mobile dropdown-toggle" data-toggle="dropdown">
+                <button type="button" class="btn menu-mobile" data-toggle="dropdown">
                     <img src="../img/menu.png" srcset="img/menu@2x.png 2x,
                  img/menu@3x.png 3x" class="menu"> 
                 </button>
-                <div class="dropdown-menu">${require("./top-navigation.html")}</div>
+                <div class="dropdown-menu mobile-dropdown">
+                	${require("./top-navigation.html")}
+                </div>
             </div>
             <div class="logo">
                 <img src="../img/pazlogo.png" srcset="img/pazlogo@2x.png 2x,
@@ -30,30 +32,12 @@
     <!-- reg and personal erea -->
     <div class="pazomat-header container-fluid d-flex align-items-center justify-content-between">
         <div class="container d-flex justify-content-lg-between">
-            <div class="r-side-gray-nav d-flex justify-content-start align-items-center col-lg-8">
+            <div class="r-side-grey-nav d-flex justify-content-start align-items-center col-lg-8">
                 <div class="pazomat-logo-sub-nav">
                     <img src="../img/pazomat-logo.svg" class="pazomat-logo">
                 </div>
-                <div class="d-none d-lg-block">
-                    <ul class="sub-nav-pazomat d-flex flex-row navbar-nav navbar navbar-expand-lg">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">אודות
-                </a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">נקודות שירות
-                </a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">טסטים ושירותים</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">מחירונים</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">שירותים</a>
-                        </li>
-                    </ul>
+                <div class="pazomat-navigation-lg d-lg-block d-none">
+               	 	${require("./pazomat-navigation.html")}
                 </div>
             </div>
             <div class="l-side-gray-nav d-flex justify-content-lg-between">
@@ -70,10 +54,15 @@
                             <br>לאתר פזומט</p>
                         <p class="d-lg-none">הרשמה</p>
                     </button>
-                    <button class="button pazomat-mobile-menu-trigger d-flex align-items-center justify-content-center flex-column d-lg-none">
-                        <img src="../img/menu.svg" class="menu">
-                        <p>תפריט</p>
-                    </button>
+                    <div class="dropdown mobile-pazomat-menu-container d-lg-none">
+	                    <button type="button" class="btn button pazomat-mobile-menu-trigger d-flex align-items-center justify-content-center flex-column d-lg-none dropdown-toggle" data-toggle="dropdown">
+	                        <img src="../img/menu.svg" class="menu">
+	                        <p>תפריט</p>
+	                    </button>
+	                    <div class="dropdown-menu mobile-pazomat-menu">
+	                    	${require("./pazomat-navigation.html")}
+	                    </div>
+                    </div>
                 </div>
             </div>
         </div>

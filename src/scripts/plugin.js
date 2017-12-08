@@ -46,3 +46,4 @@ new Swiper('#logo-swiper', {
 })
 
 $('.dropdown-toggle').dropdown();
+$('.pazomat-mobile-menu-trigger.dropdown-toggle').dropdown();
