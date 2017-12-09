@@ -33,16 +33,33 @@ new Swiper('#mishpatiot-slider', {
 })
 
 new Swiper('#logo-swiper', {
+      slidesPerView: 5,
+      spaceBetween: 10,
 
-	direction: 'horizontal',
-	loop: true,
-	speed: 900,
+      pagination: {
+        el: '.swiper-pagination.logos-pagination',
+        clickable: true,
+      },
+      navigation: {
+	      nextEl: '.swiper-button-next.logos-next',
+	      prevEl: '.swiper-button-prev.logos-prev',
+  	  },
+	    breakpoints: {
+		    1200: {
+		      slidesPerView: 4,
+		      spaceBetween: 20,
+		    },
 
+		    992: {
+		      slidesPerView: 3,
+		      spaceBetween: 20,
+		    },
 
-	navigation: {
-		nextEl: '.swiper-button-next.logos-next',
-		prevEl: '.swiper-button-prev.logos-prev',
-	},
+		    576: {
+		      slidesPerView: 3,
+		      spaceBetween: 20,
+		    },
+		}
 })
 
 $('.dropdown-toggle').dropdown();
