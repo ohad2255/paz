@@ -486,7 +486,7 @@ header {
 							font-weight: 300;
 							color: $text-white;
 
-							@media (max-width: $screen-md-min) { 
+							@media (max-width: $screen-sm-min) { 
 								font-size: 32px;
 							}
 
@@ -729,8 +729,12 @@ header {
 						background-color: $form-text;
 						border-radius: 50%;
 						position: absolute;
-						top: 18px;
-    					right: 7px;
+						top: 20px;
+						right: 7px;
+    					@media (max-width: $screen-md-min) { 
+							top: 18px;
+    						right: 7px;
+						}
 					}
 				}
 			}
@@ -971,7 +975,7 @@ header {
 		margin-top: 35px; 	
 		height: 120px;
 		background-color: $nav-2-color;
-		@media (max-width: $screen-xs-min) {
+		@media (max-width: $screen-md-min) {
 			height: 195px;
 			background-color: $nav-2-color;
 		}
@@ -989,7 +993,7 @@ header {
 
 			.swiper-button-down {
 				-webkit-transform: rotate(-90deg);
-				@media (max-width: $screen-xs-min) {
+				@media (max-width: $screen-md-min) {
 					display: none;
 				}
 			}
@@ -998,13 +1002,13 @@ header {
 				height: 120px;
 				width: 170px;
 				position: absolute;
-				@media (max-width: $screen-xs-min) {
+				@media (max-width: $screen-md-min) {
 					height: 100%;
 					width: 100%;
 				}
 
 				.mishpatiot-prev {
-					@media (max-width: $screen-xs-min) {
+					@media (max-width: $screen-sm-min) {
 					object-fit: contain;
    					background-size: 15px 25px;
    					fill: $mobile-text-color;
@@ -1012,7 +1016,7 @@ header {
 				}
 
 				.mishpatiot-next {
-					@media (max-width: $screen-xs-min) {
+					@media (max-width: $screen-sm-min) {
 					object-fit: contain;
    					background-size: 15px 25px;
    					 fill: $mobile-text-color;
@@ -1032,6 +1036,16 @@ header {
 					direction: ltr;
 				    top: 38px;
     				right: 58px;
+    				@media (max-width: $screen-md-min) {
+    					width: 60px;
+						height: 60px;
+						right: 0px;
+						top: 0px;
+						background-color: $footer-lines;
+						justify-content: center;
+						align-items: center;
+						display: flex;
+    				}
     				@media (max-width: $screen-xs-min) {
 						right: 0px;
 						top: 0px;
@@ -1052,8 +1066,11 @@ header {
 						position: relative;
 						font-size: 30px;
 						font-weight: 300;
-						@media (max-width: $screen-xs-min) {
-						font-size: 15px;
+						@media (max-width: $screen-md-min) {
+							font-size: 25px;
+						}
+						@media (max-width: $screen-sm-min) {
+							font-size: 15px;
 						}
 					}
 				}
@@ -1061,13 +1078,17 @@ header {
 
 			.mishpatiot-swiper-wrapper {
 				.swiper-slide {
-					margin-right: 95px;
-					@media (max-width: $screen-xs-min) {
+
+					@media (max-width: $screen-md-min) {
 						margin: 0;
 					}
 
 					.slide-1-con {
 						text-align: right;
+						margin-right: 195px;
+						@media (max-width: $screen-md-min) {
+							margin: 0;
+						}
 						a {
 							.play-btn-border {
 								@media (max-width: $screen-xs-min) {
@@ -1128,13 +1149,15 @@ header {
 		padding: 0;
 		border-bottom: 8px solid $med-grey;
 		height: 120px;
-		@media (max-width: $screen-xs-min) {
+		@media (max-width: $screen-md-min) {
 			height: 107px;
 			border-bottom: solid 5px $med-grey;
 		}
-		.swiper-container {
+		#logo-swiper {
 			height: 100%;
+
 			.swiper-wrapper {
+				//width: 100%;
 				@media (max-width: $screen-xs-min) {
 					img {
 						width: 111px;
@@ -1143,35 +1166,55 @@ header {
 					}
 				}
 
-				.swiper-logos {
-					img {
-						margin-left: 30px;
-						height: 42px;
-						@media (max-width: $screen-xs-min) {
-							width: 111px;
-							height: 32px;
-							margin-left: 31px;
-						}
-					}
-					.last {
-						margin: 0;
-					}
-
-					.img-just-lg {
-						@media (max-width: $screen-xs-min) {
-							display: none;
-						}
-					}
+				.swiper-slide {
+					text-align: center;
+				    font-size: 18px;
+				    background: #fff;
+				    /* Center slide text vertically */
+				    display: -webkit-box;
+				    display: -ms-flexbox;
+				    display: -webkit-flex;
+				    display: flex;
+				    -webkit-box-pack: center;
+				    -ms-flex-pack: center;
+				    -webkit-justify-content: center;
+				    justify-content: center;
+				    -webkit-box-align: center;
+				    -ms-flex-align: center;
+				    -webkit-align-items: center;
+				    align-items: center;
+				    width: 200px;
 				}
+
+				// .swiper-logos {
+				// 	img {
+				// 		margin-left: 30px;
+				// 		height: 42px;
+				// 		@media (max-width: $screen-md-min) {
+				// 			width: 111px;
+				// 			height: 32px;
+				// 			margin-left: 31px;
+				// 		}
+				// 	}
+				// 	.last {
+				// 		margin: 0;
+				// 	}
+
+				// 	.img-just-lg {
+				// 		@media (max-width: $screen-md-min) {
+				// 			display: none;
+				// 		}
+				// 	}
+				// }
 			}
 			.logos-prev {
-				@media (max-width: $screen-xs-min) {
+				@media (max-width: $screen-md-min) {
 					display: none;
 				}
 			}
 
 			.logos-next {
-				@media (max-width: $screen-xs-min) {
+				@media (max-width: $screen-md-min) {
 					display: none;
 				}
 			}
